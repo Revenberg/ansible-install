@@ -1,0 +1,22 @@
+---
+- name: Hello Ansible - quick start
+  hosts: rpi
+  become_user: root
+  become: yes
+
+  tasks:    
+    - name: Update apt-get cache
+      apt: >
+        update_cache=yes
+        cache_valid_time=360
+    
+    - name: Update all packages to the latest version
+      apt: > 
+        upgrade=yes
+
+    - name: Update repositories cache and install "oracle-java8-jdk" package
+      apt: 
+        name: oracle-java8-jdk
+
+
+        
