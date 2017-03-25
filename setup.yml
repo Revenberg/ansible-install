@@ -14,6 +14,10 @@
       apt: > 
         upgrade=yes
 
+    - name: set timezone to Europe/Amsterdam
+      timezone:
+        name: Europe/Amsterdam
+    
     - name: Update repositories cache and install "oracle-java8-jdk" package
       apt: 
         name: oracle-java8-jdk
