@@ -23,5 +23,5 @@
         state: absent
 
      - name: Update repositories cache and install "oracle-java8-jdk" package
-        apt: 
-          name: oracle-java8-jdk
+       apt: 
+         name: oracle-java8-jdk
