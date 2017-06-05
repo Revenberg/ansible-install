@@ -21,8 +21,8 @@
       apt: 
         name: wolfram-engine
         state: absent
-        
-    - name: Update repositories cache and install "oracle-java8-jdk" package
-      apt: 
-        name: oracle-java8-jdk
-        
+
+- name: Update repositories cache and install "oracle-java8-jdk" package
+      apt: name={{item}} state=installed
+      with_items:
+      - oracle-java8-jdk
